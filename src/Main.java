@@ -9,6 +9,9 @@ public class Main {
         System.out.println("░▒█▒█▒█░▒█░░▒█░▒█▄▄▀░▒█░▒█░░░▒█░░░▒█▄▄█░▒█░▒█░▒█░▒█░▒█▀▀▀░▒█▄▄▀");
         System.out.println("░▒▀▄▀▄▀░▒█▄▄▄█░▒█░▒█░▒█▄▄█░░░▒█▄▄█▒█░▒█░▒█▄▄█░▒█▄▄█░▒█▄▄▄░▒█░▒█");
         System.out.println("                                                               ");
+        System.out.println("              Welcome to Word Ladder Solver!                   ");
+        System.out.println("                       13522053                                ");
+        System.out.println("                                                               ");
         System.out.println("                                                               ");
 
         try {
@@ -30,38 +33,43 @@ public class Main {
                 }
             }
 
-            System.out.println("\nChoose an algorithm: ");
-            System.out.println("1. Uniform Cost Search");
-            System.out.println("2. Greedy Best First Search");
-            System.out.println("3. A* Search\n");
-
-            System.out.print("Enter the chosen algorithm (UCS, GBFS, A*): ");
-            String algorithm = scanner.nextLine().trim().toUpperCase();
-
-            long startTime = System.currentTimeMillis();
             List<String> path = Collections.emptyList();
+            long startTime = 0, endTime = 0;
+            boolean validAlgorithm = false;
 
-            switch (algorithm) {
-                case "UCS":
-                    path = UCS.uniformCostSearch(startWord, endWord, dictionary);
-                    break;
-                case "GBFS":
-                    path = GreedyBFS.greedyBestFirstSearch(startWord, endWord, dictionary);
-                    break;
-                case "A*":
-                    path = AStar.aStarSearch(startWord, endWord, dictionary);
-                    break;
-                default:
-                    System.out.println("Invalid algorithm selected.");
-                    return;
+            while (!validAlgorithm) {
+                System.out.println("\nChoose an algorithm: ");
+                System.out.println("1. Uniform Cost Search (UCS)");
+                System.out.println("2. Greedy Best First Search (GBFS)");
+                System.out.println("3. A* Search\n");
+
+                System.out.print("Enter the chosen algorithm (UCS, GBFS, A*): ");
+                String algorithm = scanner.nextLine().trim().toUpperCase();
+
+                startTime = System.currentTimeMillis();
+                switch (algorithm) {
+                    case "UCS":
+                        path = UCS.uniformCostSearch(startWord, endWord, dictionary);
+                        validAlgorithm = true;
+                        break;
+                    case "GBFS":
+                        path = GreedyBFS.greedyBestFirstSearch(startWord, endWord, dictionary);
+                        validAlgorithm = true;
+                        break;
+                    case "A*":
+                        path = AStar.aStarSearch(startWord, endWord, dictionary);
+                        validAlgorithm = true;
+                        break;
+                    default:
+                        System.out.println("Invalid algorithm selected. Please try again.");
+                        break;
+                }
+                endTime = System.currentTimeMillis();
             }
-
-            long endTime = System.currentTimeMillis();
 
             if (path.isEmpty()) {
                 System.out.println("\nNo path found.");
-            } 
-            else {
+            } else {
                 System.out.println("Path:");
                 for (int i = 0; i < path.size(); i++) {
                     System.out.print(path.get(i));
