@@ -17,75 +17,98 @@ public class Main {
         try {
             Set<String> dictionary = DictionaryLoader.loadDictionary("words_alpha.txt");
             Scanner scanner = new Scanner(System.in);
-            String startWord, endWord;
+            boolean continuePlaying = true;
 
-            while (true) {
-                System.out.print("Enter start word: ");
-                startWord = scanner.nextLine().toUpperCase();
-                System.out.print("Enter end word: ");
-                endWord = scanner.nextLine().toUpperCase();
+            while (continuePlaying) {
+                String startWord, endWord;
 
-                try {
-                    validateWords(startWord, endWord, dictionary);
-                    break;
-                } catch (WordLadderException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
+                // Input loop to obtain valid start and end words
+                while (true) {
+                    System.out.print("Enter start word: ");
+                    startWord = scanner.nextLine().trim().toUpperCase();
 
-            List<String> path = Collections.emptyList();
-            long startTime = 0, endTime = 0;
-            boolean validAlgorithm = false;
+                    System.out.print("Enter end word: ");
+                    endWord = scanner.nextLine().trim().toUpperCase();
 
-            while (!validAlgorithm) {
-                System.out.println("\nChoose an algorithm: ");
-                System.out.println("1. Uniform Cost Search (UCS)");
-                System.out.println("2. Greedy Best First Search (GBFS)");
-                System.out.println("3. A* Search\n");
-
-                System.out.print("Enter the chosen algorithm (UCS, GBFS, A*): ");
-                String algorithm = scanner.nextLine().trim().toUpperCase();
-
-                startTime = System.currentTimeMillis();
-                switch (algorithm) {
-                    case "UCS":
-                        path = UCS.uniformCostSearch(startWord, endWord, dictionary);
-                        validAlgorithm = true;
+                    try {
+                        validateWords(startWord, endWord, dictionary);
                         break;
-                    case "GBFS":
-                        path = GreedyBFS.greedyBestFirstSearch(startWord, endWord, dictionary);
-                        validAlgorithm = true;
-                        break;
-                    case "A*":
-                        path = AStar.aStarSearch(startWord, endWord, dictionary);
-                        validAlgorithm = true;
-                        break;
-                    default:
-                        System.out.println("Invalid algorithm selected. Please try again.");
-                        break;
-                }
-                endTime = System.currentTimeMillis();
-            }
-
-            if (path.isEmpty()) {
-                System.out.println("\nNo path found.");
-            } else {
-                System.out.println("Path:");
-                for (int i = 0; i < path.size(); i++) {
-                    System.out.print(path.get(i));
-                    if (i < path.size() - 1) {
-                        System.out.print(" -> ");
+                    } catch (WordLadderException e) {
+                        System.out.println(e.getMessage());
                     }
                 }
-                System.out.println("\n\nExecution time: " + (endTime - startTime) + " ms");
-            }
 
+                SearchResult result = null;
+                long startTime = 0, endTime = 0;
+                boolean validAlgorithm = false;
+
+                // Algorithm selection loop
+                while (!validAlgorithm) {
+                    System.out.println("\nChoose an algorithm: ");
+                    System.out.println("1. Uniform Cost Search (UCS)");
+                    System.out.println("2. Greedy Best First Search (GBFS)");
+                    System.out.println("3. A* Search\n");
+
+                    System.out.print("Enter the chosen algorithm (UCS, GBFS, A*): ");
+                    String algorithm = scanner.nextLine().trim().toUpperCase();
+
+                    startTime = System.currentTimeMillis();
+                    switch (algorithm) {
+                        case "UCS":
+                            result = UCS.uniformCostSearch(startWord, endWord, dictionary);
+                            validAlgorithm = true;
+                            break;
+                        case "GBFS":
+                            result = GreedyBFS.greedyBestFirstSearch(startWord, endWord, dictionary);
+                            validAlgorithm = true;
+                            break;
+                        case "A*":
+                            result = AStar.aStarSearch(startWord, endWord, dictionary);
+                            validAlgorithm = true;
+                            break;
+                        default:
+                            System.out.println("Invalid algorithm selected. Please try again.");
+                            break;
+                    }
+                    endTime = System.currentTimeMillis();
+                }
+
+                // Output the search results
+                if (result == null || result.getPath().isEmpty()) {
+                    System.out.println("\nNo path found.");
+                } else {
+                    System.out.println("Path length: " + result.getPath().size());
+                    System.out.println("Path:");
+                    List<String> path = result.getPath();
+                    for (int i = 0; i < path.size(); i++) {
+                        System.out.print(path.get(i));
+                        if (i < path.size() - 1) {
+                            System.out.print(" -> ");
+                        }
+                    }
+                    System.out.println("\n\nTotal nodes visited: " + result.getNodesVisited());
+                    System.out.println("Execution time: " + (endTime - startTime) + " ms");
+                }
+
+                // Ask user if they want to continue
+                System.out.print("\nDo you want to continue? (y/n): ");
+                String choice = scanner.nextLine().trim().toLowerCase();
+                System.out.println();
+                continuePlaying = choice.equals("y");
+                if (!continuePlaying) {
+                    System.out.println("Exiting the Word Ladder. Goodbye!");
+                }
+            }
         } catch (IOException e) {
             System.out.println("Failed to load dictionary: " + e.getMessage());
         }
     }
 
-    private static void validateWords(String startWord, String endWord, Set<String> dictionary) throws WordLadderException {
+    public static void validateWords(String startWord, String endWord, Set<String> dictionary) throws WordLadderException {
+        if (startWord.length() == 0 || endWord.length() == 0) {
+            throw new WordLadderException("Start word and end word must not be empty!\n");
+        }
+        
         if (!dictionary.contains(startWord) && !dictionary.contains(endWord)) {
             throw new WordLadderException("Start word and end word must be words in English!\n");
         }

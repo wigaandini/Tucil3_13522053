@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class UCS {
-    public static List<String> uniformCostSearch(String start, String end, Set<String> dictionary) {
+    public static SearchResult uniformCostSearch(String start, String end, Set<String> dictionary) {
         PriorityQueue<Node> frontier = new PriorityQueue<>(Comparator.comparingInt(n -> n.cost));
         Map<String, Integer> costSoFar = new HashMap<>();
         Map<String, String> cameFrom = new HashMap<>();
@@ -16,8 +16,7 @@ public class UCS {
             nodesVisited++;
 
             if (current.word.equals(end)) {
-                System.out.println("\nTotal nodes visited: " + nodesVisited);
-                return reconstructPath(cameFrom, current.word);
+                return new SearchResult(reconstructPath(cameFrom, current.word), nodesVisited);
             }
 
             for (String neighbor : Utils.getNeighbors(current.word, dictionary)) {
@@ -29,7 +28,7 @@ public class UCS {
                 }
             }
         }
-        return Collections.emptyList();
+        return new SearchResult(Collections.emptyList(), nodesVisited);
     }
 
     private static List<String> reconstructPath(Map<String, String> cameFrom, String current) {

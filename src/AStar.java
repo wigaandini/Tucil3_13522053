@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class AStar {
-    public static List<String> aStarSearch(String start, String end, Set<String> dictionary) {
+    public static SearchResult aStarSearch(String start, String end, Set<String> dictionary) {
         PriorityQueue<AStarNode> openSet = new PriorityQueue<>(Comparator.comparingInt(AStarNode::getF));
         Map<String, Integer> gScoreMap = new HashMap<>();
         Set<String> closedSet = new HashSet<>();
@@ -21,8 +21,7 @@ public class AStar {
                     path.add(node.word);
                 }
                 Collections.reverse(path);
-                System.out.println("\nTotal nodes visited: " + nodesVisited);
-                return path;
+                return new SearchResult(path, nodesVisited);
             }
 
             closedSet.add(current.word);
@@ -39,6 +38,6 @@ public class AStar {
                 }
             }
         }
-        return Collections.emptyList();
+        return new SearchResult(Collections.emptyList(), nodesVisited);
     }
 }
