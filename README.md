@@ -76,9 +76,7 @@ This project has been completed and can be executed.
 │   ├──
 │   └──
 │
-└── run.bat 
-    
-                                   
+└── run.bat                                  
         
 ```
 
