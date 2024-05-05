@@ -53,7 +53,7 @@ This project has been completed and can be executed.
 │
 ├── README.md
 │
-├── bin
+├── bin                         # Executable files
 │
 ├── img
 |   ├── 
@@ -66,9 +66,15 @@ This project has been completed and can be executed.
 │
 ├── src/                        # Source code files
 │   ├── 
-│   ├── bfs.go
-│   ├── go.mod
-│   └── go.sum
+│   ├──
+│   ├──
+│   └──
+│
+├── test/                        # Testing files
+│   ├── 
+│   ├──
+│   ├──
+│   └──
 │
 └── run.bat 
     
