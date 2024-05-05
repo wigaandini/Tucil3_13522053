@@ -15,7 +15,7 @@ public class Main {
         System.out.println("                                                               ");
 
         try {
-            Set<String> dictionary = DictionaryLoader.loadDictionary("dictionary.txt");
+            Set<String> dictionary = DictionaryLoader.loadDictionary("words_alpha.txt");
             Scanner scanner = new Scanner(System.in);
             String startWord, endWord;
 
@@ -87,13 +87,13 @@ public class Main {
 
     private static void validateWords(String startWord, String endWord, Set<String> dictionary) throws WordLadderException {
         if (!dictionary.contains(startWord) && !dictionary.contains(endWord)) {
-            throw new WordLadderException("Start word and end word not found in dictionary.\n");
+            throw new WordLadderException("Start word and end word must be words in English!\n");
         }
         if (!dictionary.contains(startWord)) {
-            throw new WordLadderException("Start word not found in dictionary.\n");
+            throw new WordLadderException("Start word must be words in English!\n");
         }
         if (!dictionary.contains(endWord)) {
-            throw new WordLadderException("End word not found in dictionary.\n");
+            throw new WordLadderException("End word must be words in English!\n");
         }
         if (startWord.length() != endWord.length()) {
             throw new WordLadderException("Start word and end word must be of equal length.\n");

@@ -1,24 +1,6 @@
 import java.util.*;
 
 public class AStar {
-    private static class AStarNode {
-        String word;
-        int g;
-        int h;
-        AStarNode parent;
-
-        AStarNode(String word, int g, int h, AStarNode parent) {
-            this.word = word;
-            this.g = g;
-            this.h = h;
-            this.parent = parent;
-        }
-
-        int getF() {
-            return g + h;
-        }
-    }
-
     public static List<String> aStarSearch(String start, String end, Set<String> dictionary) {
         PriorityQueue<AStarNode> openSet = new PriorityQueue<>(Comparator.comparingInt(AStarNode::getF));
         Map<String, Integer> gScoreMap = new HashMap<>();
@@ -39,7 +21,7 @@ public class AStar {
                     path.add(node.word);
                 }
                 Collections.reverse(path);
-                System.out.println("ted: " + nodesVisited);
+                System.out.println("\nTotal nodes visited: " + nodesVisited);
                 return path;
             }
 

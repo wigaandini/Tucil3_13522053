@@ -1,18 +1,6 @@
 import java.util.*;
 
 public class UCS {
-    private static class Node {
-        String word;
-        String parent;
-        int cost;
-
-        Node(String word, String parent, int cost) {
-            this.word = word;
-            this.parent = parent;
-            this.cost = cost;
-        }
-    }
-
     public static List<String> uniformCostSearch(String start, String end, Set<String> dictionary) {
         PriorityQueue<Node> frontier = new PriorityQueue<>(Comparator.comparingInt(n -> n.cost));
         Map<String, Integer> costSoFar = new HashMap<>();
