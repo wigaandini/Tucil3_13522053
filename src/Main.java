@@ -39,18 +39,27 @@ public class Main {
 
                 SearchResult result = null;
                 long startTime = 0, endTime = 0;
+                long memoryBefore = 0, memoryAfter = 0;
                 boolean validAlgorithm = false;
 
                 while (!validAlgorithm) {
                     System.out.println("\nChoose an algorithm: ");
                     System.out.println("1. Uniform Cost Search (UCS)");
                     System.out.println("2. Greedy Best First Search (GBFS)");
-                    System.out.println("3. A* Search\n");
+                    System.out.println("3. A* Search");
+                    System.out.println("4. Breadth First Search (BFS)\n");
 
-                    System.out.print("Enter the chosen algorithm (UCS, GBFS, A*): ");
+                    System.out.print("Enter the chosen algorithm (UCS, GBFS, A*, BFS): ");
                     String algorithm = scanner.nextLine().trim().toUpperCase();
 
+                    // Measure memory before execution
+                    Runtime runtime = Runtime.getRuntime();
+                    runtime.gc();  // Request garbage collection for accurate reading
+                    memoryBefore = runtime.totalMemory() - runtime.freeMemory();
+
+                    // Measure start time
                     startTime = System.currentTimeMillis();
+
                     switch (algorithm) {
                         case "UCS":
                             result = UCS.uniformCostSearch(startWord, endWord, dictionary);
@@ -64,11 +73,20 @@ public class Main {
                             result = AStar.aStarSearch(startWord, endWord, dictionary);
                             validAlgorithm = true;
                             break;
+                        case "BFS":
+                            result = BFS.breadthFirstSearch(startWord, endWord, dictionary);
+                            validAlgorithm = true;
+                            break;
                         default:
                             System.out.println("Invalid algorithm selected. Please try again.");
                             break;
                     }
+
+                    // Measure end time
                     endTime = System.currentTimeMillis();
+                    
+                    // Measure memory after execution
+                    memoryAfter = runtime.totalMemory() - runtime.freeMemory();
                 }
 
                 if (result == null || result.getPath().isEmpty()) {
@@ -85,12 +103,17 @@ public class Main {
                     }
                     System.out.println("\n\nTotal nodes visited: " + result.getNodesVisited());
                     System.out.println("Execution time: " + (endTime - startTime) + " ms");
+                    System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
                 }
 
                 System.out.print("\nDo you want to continue? (y/n): ");
                 String choice = scanner.nextLine().trim().toLowerCase();
                 System.out.println();
                 continuePlaying = choice.equals("y");
+                if (choice != "y" && choice != "n") {
+                    System.out.print("Invalid input. ");
+                    continuePlaying = false;
+                }
                 if (!continuePlaying) {
                     System.out.println("Exiting the Word Ladder. Goodbye!");
                 }

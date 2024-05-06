@@ -49,7 +49,7 @@ public class WordLadderGUI extends JFrame {
         JLabel algoLabel = new JLabel("Algorithm:");
         algoLabel.setFont(boldFont);
         algoLabel.setForeground(softPink);
-        algorithmBox = new JComboBox<>(new String[]{"UCS", "Greedy BFS", "A*"});
+        algorithmBox = new JComboBox<>(new String[]{"UCS", "Greedy BFS", "A*", "BFS"});
         algorithmBox.setFont(boldFont);
 
         inputPanel.add(startLabel);
@@ -124,6 +124,9 @@ public class WordLadderGUI extends JFrame {
                 break;
             case "A*":
                 result = AStar.aStarSearch(startWord, endWord, dictionary);
+                break;
+            case "BFS":
+                result = BFS.breadthFirstSearch(startWord, endWord, dictionary);
                 break;
         }
         long endTime = System.currentTimeMillis();
