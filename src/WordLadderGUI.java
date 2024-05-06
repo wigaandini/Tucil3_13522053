@@ -23,13 +23,12 @@ public class WordLadderGUI extends JFrame {
         setLocationRelativeTo(null);
 
         try {
-            dictionary = DictionaryLoader.loadDictionary("newdict.txt");
+            dictionary = DictionaryLoader.loadDictionary("dictionary.txt");
         } catch (IOException e) {
             JOptionPane.showMessageDialog(this, "Unable to load dictionary!", "Error", JOptionPane.ERROR_MESSAGE);
             System.exit(1);
         }
 
-        // Panel for input fields
         JPanel inputPanel = new JPanel(new GridLayout(3, 2, 10, 10));
         inputPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         inputPanel.setOpaque(true);
@@ -60,7 +59,6 @@ public class WordLadderGUI extends JFrame {
         inputPanel.add(algoLabel);
         inputPanel.add(algorithmBox);
 
-        // Button to start the search
         JButton searchButton = new JButton("Search!");
         searchButton.setFont(boldFont);
         searchButton.setForeground(Color.WHITE);
@@ -74,14 +72,13 @@ public class WordLadderGUI extends JFrame {
             }
         });
 
-        // Adding extra space above the button by using a panel with an empty border
         JPanel buttonPanel = new JPanel();
         buttonPanel.setOpaque(false);
-        buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 0, 0)); // 20px gap above the button
+        buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 0, 0)); 
         buttonPanel.add(searchButton);
 
-        // Text area for output
         outputArea = new JTextArea(10, 40);
+        outputArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         outputArea.setEditable(false);
         outputArea.setFont(boldFont);
         outputArea.setLineWrap(true);
@@ -94,7 +91,6 @@ public class WordLadderGUI extends JFrame {
         scrollPane.setOpaque(true);
         scrollPane.setBackground(backgroundColor);
 
-        // Layout setup
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setOpaque(true);
         mainPanel.setBackground(backgroundColor);
@@ -123,7 +119,7 @@ public class WordLadderGUI extends JFrame {
             case "UCS":
                 result = UCS.uniformCostSearch(startWord, endWord, dictionary);
                 break;
-            case "GBFS":
+            case "Greedy BFS":
                 result = GreedyBFS.greedyBestFirstSearch(startWord, endWord, dictionary);
                 break;
             case "A*":
