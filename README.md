@@ -1,6 +1,8 @@
 <h1 align="center"> Tugas Kecil 3 IF2211 Strategi Algoritma </h1>
 <h1 align="center">  Penyelesaian Permainan Word Ladder Menggunakan Algoritma UCS, Greedy Best First Search, dan A* </h1>
 
+![WordLadder](img/wordladder.png)
+
 
 ## Table of Contents
 1. [General Information](#general-information)
