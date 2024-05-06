@@ -70,46 +70,46 @@ This project has been completed and can be executed.
 │
 │  
 ├── bin                         # Executable files
-|   ├── AStar.class
-|   ├── AStarNode.class
-|   ├── dictionary.txt
-|   ├── DictionaryLoader.class
-|   ├── GreedyBFS.class
-|   ├── GreedyBFS$Node.class
-|   ├── Main.class
-|   ├── Node.class
-|   ├── SearchResult.class
-|   ├── UCS.class
-|   ├── Utils.class
-|   ├── WordLadderException.class
-|   ├── WordLadderGUI.class
-│   └── WordLadderGUI$1.class
+|    ├── AStar.class
+|    ├── AStarNode.class
+|    ├── dictionary.txt
+|    ├── DictionaryLoader.class
+|    ├── GreedyBFS.class
+|    ├── GreedyBFS$Node.class
+|    ├── Main.class
+|    ├── Node.class
+|    ├── SearchResult.class
+|    ├── UCS.class
+|    ├── Utils.class
+|    ├── WordLadderException.class
+|    ├── WordLadderGUI.class
+│    └── WordLadderGUI$1.class
 │  
 │  
 ├── doc/                        # Document files
-│   └── Tucil3_13522053.pdf
+│    └── Tucil3_13522053.pdf
 │
 │  
 ├── src/                        # Source code files
-|   ├── AStar.java
-|   ├── AStarNode.java
-|   ├── dictionary.txt
-|   ├── DictionaryLoader.java
-|   ├── GreedyBFS.java
-|   ├── Main.java
-|   ├── Node.java
-|   ├── SearchResult.java
-|   ├── UCS.java
-|   ├── Utils.java
-|   ├── WordLadderException.java
-│   └── WordLadderGUI.java 
+|    ├── AStar.java
+|    ├── AStarNode.java
+|    ├── dictionary.txt
+|    ├── DictionaryLoader.java
+|    ├── GreedyBFS.java
+|    ├── Main.java
+|    ├── Node.java
+|    ├── SearchResult.java
+|    ├── UCS.java
+|    ├── Utils.java
+|    ├── WordLadderException.java
+│    └── WordLadderGUI.java 
 │
 │
 ├── test/                        # Testing files
-│   ├── 
-│   ├──
-│   ├──
-│   └──
+│    ├── 
+│    ├──
+│    ├──
+│    └──
 │
 │
 ├── run.bat     
