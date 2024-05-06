@@ -76,21 +76,21 @@ This project has been completed and can be executed.
 │
 │  
 ├── bin                         # Executable files
-|    ├── AStar.class
-|    ├── AStarNode.class
-|    ├── BFS.class
-|    ├── BFS$Node.class
-|    ├── dictionary.txt
-|    ├── DictionaryLoader.class
-|    ├── GreedyBFS.class
-|    ├── GreedyBFS$Node.class
-|    ├── Main.class
-|    ├── Node.class
-|    ├── SearchResult.class
-|    ├── UCS.class
-|    ├── Utils.class
-|    ├── WordLadderException.class
-|    ├── WordLadderGUI.class
+│    ├── AStar.class
+│    ├── AStarNode.class
+│    ├── BFS.class
+│    ├── BFS$Node.class
+│    ├── dictionary.txt
+│    ├── DictionaryLoader.class
+│    ├── GreedyBFS.class
+│    ├── GreedyBFS$Node.class
+│    ├── Main.class
+│    ├── Node.class
+│    ├── SearchResult.class
+│    ├── UCS.class
+│    ├── Utils.class
+│    ├── WordLadderException.class
+│    ├── WordLadderGUI.class
 │    └── WordLadderGUI$1.class
 │  
 │  
@@ -99,18 +99,18 @@ This project has been completed and can be executed.
 │
 │  
 ├── src/                        # Source code files
-|    ├── AStar.java
-|    ├── AStarNode.java
-|    ├── BFS.java
-|    ├── dictionary.txt
-|    ├── DictionaryLoader.java
-|    ├── GreedyBFS.java
-|    ├── Main.java
-|    ├── Node.java
-|    ├── SearchResult.java
-|    ├── UCS.java
-|    ├── Utils.java
-|    ├── WordLadderException.java
+│    ├── AStar.java
+│    ├── AStarNode.java
+│    ├── BFS.java
+│    ├── dictionary.txt
+│    ├── DictionaryLoader.java
+│    ├── GreedyBFS.java
+│    ├── Main.java
+│    ├── Node.java
+│    ├── SearchResult.java
+│    ├── UCS.java
+│    ├── Utils.java
+│    ├── WordLadderException.java
 │    └── WordLadderGUI.java 
 │
 │
