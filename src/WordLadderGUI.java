@@ -109,7 +109,7 @@ public class WordLadderGUI extends JFrame {
         try {
             Main.validateWords(startWord, endWord, dictionary);
         } catch (WordLadderException e) {
-            outputArea.setText(e.getMessage());
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 

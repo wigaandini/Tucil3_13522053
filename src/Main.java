@@ -105,10 +105,6 @@ public class Main {
                 String choice = scanner.nextLine().trim().toLowerCase();
                 System.out.println();
                 continuePlaying = choice.equals("y");
-                if (choice != "y" && choice != "n") {
-                    System.out.print("Invalid input. ");
-                    continuePlaying = false;
-                }
                 if (!continuePlaying) {
                     System.out.println("Exiting the Word Ladder. Goodbye!");
                 }
