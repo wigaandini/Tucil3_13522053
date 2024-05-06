@@ -52,12 +52,10 @@ public class Main {
                     System.out.print("Enter the chosen algorithm (UCS, GBFS, A*, BFS): ");
                     String algorithm = scanner.nextLine().trim().toUpperCase();
 
-                    // Measure memory before execution
                     Runtime runtime = Runtime.getRuntime();
-                    runtime.gc();  // Request garbage collection for accurate reading
+                    runtime.gc();
                     memoryBefore = runtime.totalMemory() - runtime.freeMemory();
 
-                    // Measure start time
                     startTime = System.currentTimeMillis();
 
                     switch (algorithm) {
@@ -82,10 +80,7 @@ public class Main {
                             break;
                     }
 
-                    // Measure end time
                     endTime = System.currentTimeMillis();
-                    
-                    // Measure memory after execution
                     memoryAfter = runtime.totalMemory() - runtime.freeMemory();
                 }
 
