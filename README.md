@@ -141,3 +141,10 @@ This project has been completed and can be executed.
 ```
 
 ## Screenshots
+![UCS Algorithm Normal](test/TC-GUI-UCS-Normal.png)
+![GBFS Algorithm Normal](test/TC-GUI-GBFS-Normal.png)
+![A* Algorithm Normal](test/TC-GUI-AStar-Normal.png)
+![No Path Found](test/TC-GUI-NoPath.png)
+![Word Not English](test/TC-GUI-WordNotEnglish.png)
+![Word Input Empty](test/TC-GUI-WordEmpty.png)
+![Word Length Not Equal](test/TC-GUI-WordNotEqual.png)
