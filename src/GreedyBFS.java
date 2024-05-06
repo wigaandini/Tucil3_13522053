@@ -32,7 +32,7 @@ public class GreedyBFS {
                     current = current.parent;
                 }
                 Collections.reverse(path);
-                System.out.println("\nTotal nodes visited: " + nodesVisited);
+                // System.out.println("\nTotal nodes visited: " + nodesVisited);
                 return new SearchResult(path, nodesVisited);
             }
 
