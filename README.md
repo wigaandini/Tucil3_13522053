@@ -17,6 +17,7 @@
 
 ## General Information
 Word ladder (also known as Doublets, word-links, change-the-word puzzles, paragrams, laddergrams, or word golf) is a well-known word game enjoyed by all ages. The game was invented in 1877 by Lewis Carroll, a writer and mathematician. In the game, players are given two words: a starting word and an ending word. To win, they must find a chain of words linking the start and end words. Both words always have the same number of letters. Each consecutive word in the chain may differ by only one letter. The goal is to find the optimal solution, which minimizes the number of words included in the chain.
+There's three algorithm that user can use for playing the Word Ladder using this program. The first algorithm is Uniform Cost Search (UCS) where the formation of a path word ladder uses a priority queue to store the value g(n), namely the cost from root to node n in order from smallest. The second algorithm is Greedy Best First Search (GBFS) where the formation of a path word ladder uses a priority queue to store the heuristic value h(n), namely the estimated cost from node n to the destination node in order from the smallest. The last algorithm is A* where the formation of a path word ladder uses a priority queue to store the heuristic value f(n) which is the sum of g(n) and h(n) as has been explained that g(n) is the cost from the root to node n and h(n) is the estimated cost from node n to the destination node. The f(n) values are ordered from the smallest.
 
 
 ## Contributors
@@ -114,10 +115,22 @@ This project has been completed and can be executed.
 │
 │
 ├── test/                        # Testing files
-│    ├── 
-│    ├──
-│    ├──
-│    └──
+│    ├── TC-GUI-AStar-Normal.png        
+│    ├── TC-GUI-GBFS-Normal.png
+│    ├── TC-GUI-NoPath.png
+│    ├── TC-GUI-UCS-Normal.png 
+│    ├── TC-GUI-WordEmpty.png 
+│    ├── TC-GUI-WordNotEnglish.png
+│    ├── TC-GUI-WordNotEqual.png
+│    ├── TC1(Tooth-Fairy).txt       
+│    ├── TC2(Earn-Make).txt
+│    ├── TC3(Free-Form).txt 
+│    ├── TC4(Believer-Evaluate).txt
+│    ├── TC5(Sand-Crab).txt
+│    ├── TC6(Flower-Sunset).txt
+│    ├── TC7(WordNotEnglish).txt 
+│    ├── TC8(EmptyWord).txt
+│    └── TC9(NotEqual).txt
 │
 │
 ├── run.bat     
