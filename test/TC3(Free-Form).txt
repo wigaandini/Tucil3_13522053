@@ -1,0 +1,58 @@
+-------------------------------- UCS ----------------------------------- 
+Enter start word: free
+Enter end word: form
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): ucs
+Path length: 7
+Path:
+FREE -> FLEE -> FLEY -> FLAY -> FLAM -> FOAM -> FORM
+
+Total nodes visited: 2022
+Execution time: 49 ms
+Memory used: 10742160 bytes
+
+
+----------------------- Greedy Best First Search ----------------------- 
+Enter start word: free
+Enter end word: form
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): gbfs
+Path length: 7
+Path:
+FREE -> FLEE -> FLEY -> FLAY -> FLAM -> FOAM -> FORM
+
+Total nodes visited: 21
+Execution time: 1 ms
+Memory used: 251672 bytes
+
+
+--------------------------------- A* ------------------------------------
+Enter start word: free
+Enter end word: form
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): a*
+Path length: 7
+Path:
+FREE -> FRAE -> FRAY -> FLAY -> FLAM -> FOAM -> FORM
+
+Total nodes visited: 83
+Execution time: 2 ms
+Memory used: 503336 bytes

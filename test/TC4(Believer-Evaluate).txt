@@ -1,0 +1,43 @@
+-------------------------------- UCS ----------------------------------- 
+Enter start word: believer
+Enter end word: evaluate
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): ucs
+
+No path found.
+
+
+----------------------- Greedy Best First Search ----------------------- 
+Enter start word: believer
+Enter end word: evaluate
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): gbfs
+
+No path found.
+
+
+--------------------------------- A* ------------------------------------
+Enter start word: believer
+Enter end word: evaluate
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): a*
+
+No path found.

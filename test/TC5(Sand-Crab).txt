@@ -1,0 +1,58 @@
+-------------------------------- UCS ----------------------------------- 
+Enter start word: sand
+Enter end word: crab
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): ucs
+Path length: 8
+Path:
+SAND -> BAND -> BEND -> BEAD -> BRAD -> BRAW -> CRAW -> CRAB
+
+Total nodes visited: 3723
+Execution time: 79 ms
+Memory used: 5209600 bytes
+
+
+----------------------- Greedy Best First Search ----------------------- 
+Enter start word: sand
+Enter end word: crab
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): gbfs
+Path length: 11
+Path:
+SAND -> SANS -> CANS -> CONS -> COSS -> COST -> COAT -> CHAT -> CHAM -> CRAM -> CRAB
+
+Total nodes visited: 79
+Execution time: 3 ms
+Memory used: 532712 bytes
+
+
+--------------------------------- A* ------------------------------------
+Enter start word: sand
+Enter end word: crab
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): a*
+Path length: 8
+Path:
+SAND -> SAID -> CAID -> CHID -> CHIS -> CRIS -> CRIB -> CRAB
+
+Total nodes visited: 274
+Execution time: 8 ms
+Memory used: 1598104 bytes

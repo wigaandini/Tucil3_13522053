@@ -1,0 +1,59 @@
+-------------------------------- UCS ----------------------------------- 
+Enter start word: tooth
+Enter end word: fairy
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): ucs
+Path length: 8
+Path:
+TOOTH -> TOOTS -> TOOLS -> FOOLS -> FOILS -> FAILS -> FAIRS -> FAIRY
+
+Total nodes visited: 4478
+Execution time: 212 ms
+Memory used: 17330952 bytes
+
+
+----------------------- Greedy Best First Search ----------------------- 
+Enter start word: tooth
+Enter end word: fairy
+
+Choose an algorithm: 
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): gbfs
+Path length: 15
+Path:
+TOOTH -> BOOTH -> BOOTY -> FOOTY -> FORTY -> FORKY -> FOLKY -> FOLLY -> FELLY -> FERLY -> FERRY -> FIRRY -> FIERY -> FAERY -> FAIRY
+
+Total nodes visited: 20
+Execution time: 9 ms
+Memory used: 465016 bytes
+
+
+--------------------------------- A* ------------------------------------
+Enter start word: tooth
+Enter end word: fairy
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): a*
+Path length: 8
+Path:
+TOOTH -> TOOTS -> TOITS -> TOILS -> TAILS -> FAILS -> FAIRS -> FAIRY
+
+Total nodes visited: 46
+Execution time: 16 ms
+Memory used: 673112 bytes
+

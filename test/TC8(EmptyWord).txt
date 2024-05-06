@@ -1,0 +1,3 @@
+Enter start word:
+Enter end word:
+Start word and end word must not be empty!

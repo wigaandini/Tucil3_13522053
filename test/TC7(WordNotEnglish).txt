@@ -1,0 +1,3 @@
+Enter start word: tangan
+Enter end word: sarung
+Start word and end word must be words in English!

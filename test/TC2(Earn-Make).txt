@@ -1,0 +1,58 @@
+-------------------------------- UCS ----------------------------------- 
+Enter start word: earn
+Enter end word: make
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): ucs
+Path length: 5
+Path:
+EARN -> CARN -> CARE -> CAKE -> MAKE
+
+Total nodes visited: 1277
+Execution time: 50 ms
+Memory used: 7083896 bytes
+
+
+----------------------- Greedy Best First Search ----------------------- 
+Enter start word: earn
+Enter end word: make
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): gbfs
+Path length: 5
+Path:
+EARN -> BARN -> BARE -> MARE -> MAKE
+
+Total nodes visited: 5
+Execution time: 1 ms
+Memory used: 254360 bytes
+
+
+--------------------------------- A* ------------------------------------
+Enter start word: earn
+Enter end word: make
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): a*
+Path length: 5
+Path:
+EARN -> TARN -> TARE -> TAKE -> MAKE
+
+Total nodes visited: 18
+Execution time: 1 ms
+Memory used: 254360 bytes

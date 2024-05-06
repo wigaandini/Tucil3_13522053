@@ -1,0 +1,3 @@
+Enter start word: stranger
+Enter end word: love
+Start word and end word must be of equal length.

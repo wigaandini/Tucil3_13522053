@@ -1,0 +1,58 @@
+-------------------------------- UCS ----------------------------------- 
+Enter start word: flower
+Enter end word: sunset
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): ucs
+Path length: 14
+Path:
+FLOWER -> FLOWED -> FLAWED -> FLAKED -> SLAKED -> SOAKED -> SOCKED -> SUCKED -> BUCKED -> BUNKED -> JUNKED -> JUNKET -> SUNKET -> SUNSET
+
+Total nodes visited: 6187
+Execution time: 98 ms
+Memory used: 3597792 bytes
+
+
+----------------------- Greedy Best First Search ----------------------- 
+Enter start word: flower
+Enter end word: sunset
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): gbfs
+Path length: 35
+Path:
+FLOWER -> SLOWER -> SLOWED -> SLOPED -> SLIPED -> SWIPED -> SWIVED -> SWIVES -> SKIVES -> SKIVER -> SLIVER -> SLAVER -> SLAVEY -> SLATEY -> SLATES -> STATES -> STALES -> STALED -> SEALED -> SEELED -> SEEDED -> SENDED -> SANDED -> SANDER -> SANGER -> SINGER -> SINNER -> SINNED -> SUNNED -> DUNNED -> DUNKED -> JUNKED -> JUNKET -> SUNKET -> SUNSET
+
+Total nodes visited: 344
+Execution time: 13 ms
+Memory used: 2752208 bytes
+
+
+--------------------------------- A* ------------------------------------
+Enter start word: flower
+Enter end word: sunset
+
+Choose an algorithm:
+1. Uniform Cost Search (UCS)
+2. Greedy Best First Search (GBFS)
+3. A* Search
+4. Breadth First Search (BFS)
+
+Enter the chosen algorithm (UCS, GBFS, A*, BFS): a*
+Path length: 14
+Path:
+FLOWER -> FLOWED -> FLAWED -> BLAWED -> BLADED -> BEADED -> BENDED -> FENDED -> FUNDED -> FUNKED -> JUNKED -> JUNKET -> SUNKET -> SUNSET
+
+Total nodes visited: 1837
+Execution time: 181 ms
+Memory used: 3116448 bytes
