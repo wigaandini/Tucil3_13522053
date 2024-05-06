@@ -46,18 +46,21 @@ Features that used in this program are:
 ### CLI Based
 1. Clone this repository by typing `git clone https://github.com/wigaandini/Tucil3_13522053.git` in terminal.
 2. Open the repository folder.
-3. Type `run.bat` in terminal.
-4. Input the start word and end word.
-5. Choose the algorithm by typing `UCS` / `GBFS` / `A*`.
-6. Wait and the result will appear.
+3. If you're using Windows, type `./run-CLI.bat` in terminal.
+4. If you're using Linux, type `chmod +x run-CLI.sh` in terminal then type `./run-CLI.sh`.
+5. Input the start word and end word.
+6. Choose the algorithm by typing `UCS` / `GBFS` / `A*`/ `BFS`.
+7. Wait and the result will appear.
 
 ### GUI Based
 1. Clone this repository by typing `git clone https://github.com/wigaandini/Tucil3_13522053.git` in terminal.
 2. Open the repository folder.
-3. Type `run1.bat` in terminal.
-4. Input the start word and end word.
-5. Choose the algorithm in the box.
-6. Wait and the result will appear.
+3. If you're using Windows, type `./run-GUI.bat` in terminal.
+4. If you're using Linux, type `chmod +x run-GUI.sh` in terminal then type `./run-GUI.sh`.
+5. Input the start word and end word.
+6. Choose the algorithm in the box.
+7. Click the `Search!` button.
+8. Wait and the result will appear.
 
 
 ## Project Status
