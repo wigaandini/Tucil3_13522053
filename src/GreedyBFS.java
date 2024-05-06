@@ -18,8 +18,7 @@ public class GreedyBFS {
     public static SearchResult greedyBestFirstSearch(String start, String end, Set<String> dictionary) {
         Queue<Node> queue = new PriorityQueue<>(Comparator.comparingInt(node -> node.heuristic));
         Map<String, Integer> visited = new HashMap<>();
-        Node startNode = new Node(start, null, 0, Utils.calculateHeuristic(start, end));
-        queue.add(startNode);
+        queue.add(new Node(start, null, 0, Utils.calculateHeuristic(start, end)));
         int nodesVisited = 0;
 
         while (!queue.isEmpty()) {
@@ -27,7 +26,14 @@ public class GreedyBFS {
             nodesVisited++;
 
             if (current.word.equals(end)) {
-                return new SearchResult(reconstructPath(current), nodesVisited);
+                List<String> path = new ArrayList<>();
+                while (current != null) {
+                    path.add(current.word);
+                    current = current.parent;
+                }
+                Collections.reverse(path);
+                System.out.println("\nTotal nodes visited: " + nodesVisited);
+                return new SearchResult(path, nodesVisited);
             }
 
             for (String neighbor : Utils.getNeighbors(current.word, dictionary)) {
@@ -38,15 +44,5 @@ public class GreedyBFS {
             }
         }
         return new SearchResult(Collections.emptyList(), nodesVisited);
-    }
-
-    private static List<String> reconstructPath(Node node) {
-        List<String> path = new ArrayList<>();
-        while (node != null) {
-            path.add(node.word);
-            node = node.parent;
-        }
-        Collections.reverse(path);
-        return path;
     }
 }

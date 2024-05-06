@@ -5,7 +5,7 @@ import java.util.Set;
 public class Utils {
     public static List<String> getNeighbors(String word, Set<String> dictionary) {
         List<String> neighbors = new ArrayList<>();
-        char[] chars = word.toCharArray();
+        char[] chars = word.toUpperCase().toCharArray();
         for (int i = 0; i < chars.length; i++) {
             char originalChar = chars[i];
             for (char c = 'A'; c <= 'Z'; c++) {
@@ -14,6 +14,7 @@ public class Utils {
                     String newWord = new String(chars);
                     if (dictionary.contains(newWord)) {
                         neighbors.add(newWord);
+                        // System.out.println("Valid neighbor for " + word + ": " + newWord);
                     }
                 }
             }
@@ -21,6 +22,7 @@ public class Utils {
         }
         return neighbors;
     }
+    
 
     public static int calculateHeuristic(String word1, String word2) {
         int diff = 0;
