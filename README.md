@@ -41,6 +41,21 @@ Features that used in this program are:
 
 
 ## How to Run The Program
+### CLI Based
+1. Clone this repository by typing `git clone https://github.com/wigaandini/Tucil3_13522053.git` in terminal.
+2. Open the repository folder.
+3. Type `run.bat` in terminal.
+4. Input the start word and end word.
+5. Choose the algorithm by typing `UCS` / `GBFS` / `A*`.
+6. Wait and the result will appear.
+
+### GUI Based
+1. Clone this repository by typing `git clone https://github.com/wigaandini/Tucil3_13522053.git` in terminal.
+2. Open the repository folder.
+3. Type `run1.bat` in terminal.
+4. Input the start word and end word.
+5. Choose the algorithm in the box.
+6. Wait and the result will appear.
 
 
 ## Project Status
@@ -53,22 +68,42 @@ This project has been completed and can be executed.
 │
 ├── README.md
 │
+│  
 ├── bin                         # Executable files
-│
-├── img
-|   ├── 
-|   ├── 
-|   ├── 
-│   └── 
-│
+|   ├── AStar.class
+|   ├── AStarNode.class
+|   ├── dictionary.txt
+|   ├── DictionaryLoader.class
+|   ├── GreedyBFS.class
+|   ├── GreedyBFS$Node.class
+|   ├── Main.class
+|   ├── Node.class
+|   ├── SearchResult.class
+|   ├── UCS.class
+|   ├── Utils.class
+|   ├── WordLadderException.class
+|   ├── WordLadderGUI.class
+│   └── WordLadderGUI$1.class
+│  
+│  
 ├── doc/                        # Document files
 │   └── Tucil3_13522053.pdf
 │
+│  
 ├── src/                        # Source code files
-│   ├── 
-│   ├──
-│   ├──
-│   └──
+|   ├── AStar.java
+|   ├── AStarNode.java
+|   ├── dictionary.txt
+|   ├── DictionaryLoader.java
+|   ├── GreedyBFS.java
+|   ├── Main.java
+|   ├── Node.java
+|   ├── SearchResult.java
+|   ├── UCS.java
+|   ├── Utils.java
+|   ├── WordLadderException.java
+│   └── WordLadderGUI.java 
+│
 │
 ├── test/                        # Testing files
 │   ├── 
@@ -76,7 +111,11 @@ This project has been completed and can be executed.
 │   ├──
 │   └──
 │
-└── run.bat                                  
+│
+├── run.bat     
+│
+│                           
+└── run1.bat                                  
         
 ```
 
