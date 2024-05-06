@@ -15,14 +15,13 @@ public class Main {
         System.out.println("                                                               ");
 
         try {
-            Set<String> dictionary = DictionaryLoader.loadDictionary("words_alpha.txt");
+            Set<String> dictionary = DictionaryLoader.loadDictionary("dictionary.txt");
             Scanner scanner = new Scanner(System.in);
             boolean continuePlaying = true;
 
             while (continuePlaying) {
                 String startWord, endWord;
 
-                // Input loop to obtain valid start and end words
                 while (true) {
                     System.out.print("Enter start word: ");
                     startWord = scanner.nextLine().trim().toUpperCase();
@@ -42,7 +41,6 @@ public class Main {
                 long startTime = 0, endTime = 0;
                 boolean validAlgorithm = false;
 
-                // Algorithm selection loop
                 while (!validAlgorithm) {
                     System.out.println("\nChoose an algorithm: ");
                     System.out.println("1. Uniform Cost Search (UCS)");
@@ -73,7 +71,6 @@ public class Main {
                     endTime = System.currentTimeMillis();
                 }
 
-                // Output the search results
                 if (result == null || result.getPath().isEmpty()) {
                     System.out.println("\nNo path found.");
                 } else {
@@ -90,7 +87,6 @@ public class Main {
                     System.out.println("Execution time: " + (endTime - startTime) + " ms");
                 }
 
-                // Ask user if they want to continue
                 System.out.print("\nDo you want to continue? (y/n): ");
                 String choice = scanner.nextLine().trim().toLowerCase();
                 System.out.println();
