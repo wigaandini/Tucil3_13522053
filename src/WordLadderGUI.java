@@ -84,7 +84,7 @@ public class WordLadderGUI extends JFrame {
         outputScrollPane = new JScrollPane(outputPanel);
         outputScrollPane.setOpaque(true);
         outputScrollPane.setBackground(backgroundColor);
-        outputScrollPane.setPreferredSize(new Dimension(680, 300));
+        outputScrollPane.setPreferredSize(new Dimension(680, 350));
 
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setOpaque(true);
